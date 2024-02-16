@@ -1,5 +1,5 @@
 {
-  "homepage": "https://victorwest.github.io/ai-with-google/",
+  "homepage": "https://victorwest.github.io/google-ai/",
   "name": "ai-with-gemini",
   "private": true,
   "version": "0.0.0",
@@ -19,7 +19,6 @@
     "@mui/icons-material": "^5.15.10",
     "@mui/material": "^5.15.10",
     "@mui/styled-engine-sc": "^6.0.0-alpha.16",
-    "@mui/styles": "^5.15.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.8"

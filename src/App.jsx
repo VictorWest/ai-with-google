@@ -3,39 +3,13 @@ import {
   HarmCategory,
   HarmBlockThreshold,
 } from "@google/generative-ai";
-import { useState, useEffect} from "react";
+import { useState} from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import { Zoom } from "@mui/material";
 import DoubleArrowRoundedIcon from '@mui/icons-material/DoubleArrowRounded';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme) => ({
-  customZoom: {
-    width: 0,
-    whiteSpace: 'nowrap',
-    animation: '$growFromLeft 0.5s forwards', 
-  },
-  '@keyframes growFromLeft': {
-    from: {
-      width: 0,
-    },
-    to: {
-      width: '100%', 
-    },
-  },
-}));
-
 
 function App() {
   let newPrompt
-  const classes = useStyles();
-  const [initialRender, setInitialRender] = useState(true);
-
-  useEffect(() => {
-    if (initialRender) {
-      setInitialRender(false);
-    }
-  }, [initialRender]);
   const MODEL_NAME = "gemini-pro";
   const API_KEY = "AIzaSyBoA9M6I_XdUC_tONYh111O7wt8_YlO-Q8";
   const [input, setinput] = useState("")
@@ -109,13 +83,7 @@ function App() {
       </Zoom>
           <div className="container">
           <div className="chat-container">
-          <Zoom in={!initialRender} style={{ transitionDelay: '0.3s' }}>
-            <div className={classes.customZoom}>
-                <input className="chat-box" id="chat-box" contentEditable={true} placeholder="Message Gemini..." onChange={handleChange}></input>   
-            </div>
-          </Zoom>
-
-            
+          <input className="chat-box" id="chat-box" contentEditable={true} placeholder="Message Gemini..." onChange={handleChange}></input>   
           </div>
 
             <button type="submit" id="submit" onClick={addInput}>
